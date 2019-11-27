@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Список дел</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <section class="section section_first">
+                        <h2 class="section__title">Список дел:</h2>
+                        <p class="section__no-list js-list-empty">Список пуст...</p>
+                        <ul class="section__list js-list-filled">
+                            <li class="section__item">
+                                <article class="card">
+                                    <header class="card__header">
+                                        <h3>Купить лошадь</h3>
+                                        <div class="js-card-remove">&#10006;</div>
+                                    </header>
+                                    <div class="card__content">
+                                        <p>По цене 300 т.р. за штуку </p>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="section section_second">
+                        <h2 class="section__title">Добавить новое дело</h2>
+                        <form action="#" class="section__form form">
+                            <label class="form__label">
+                                * Название
+                                <input class="form__input" type="text" placeholder="Купить лошадь" name="taskTitle">
+                            </label>
+                            <label class="form__label">
+                                * Описание
+                                <textarea class="form__input form__input_lg" name="taskDescr" cols="30" rows="10" placeholder=""></textarea>
+                            </label>
+                            <input class="section__btn" type="submit">
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
