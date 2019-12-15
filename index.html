@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Список дел</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -15,13 +16,34 @@
                         <p class="section__no-list js-list-empty">Список пуст...</p>
                         <ul class="section__list js-list-filled">
                             <li class="section__item">
-                                <article class="card">
+                                <article class="card active">
                                     <header class="card__header">
                                         <h3>Купить лошадь</h3>
-                                        <div class="js-card-remove">&#10006;</div>
+                                        <div class="card__remove js-card-remove">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="card__arrow js-drop-down">
+                                            <i class="fas fa-caret-left"></i>
+                                        </div>
                                     </header>
                                     <div class="card__content">
                                         <p>По цене 300 т.р. за штуку </p>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="section__item">
+                                <article class="card active">
+                                    <header class="card__header">
+                                        <h3>Купить лошадь</h3>
+                                        <div class="card__remove js-card-remove">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="card__arrow js-drop-down">
+                                            <i class="fas fa-caret-left"></i>
+                                        </div>
+                                    </header>
+                                    <div class="card__content">
+                                        <p>По цене 500 т.р. за штуку </p>
                                     </div>
                                 </article>
                             </li>
@@ -38,11 +60,13 @@
                                 * Описание
                                 <textarea class="form__input form__input_lg" name="taskDescr" cols="30" rows="10" placeholder=""></textarea>
                             </label>
-                            <input class="section__btn" type="submit">
+                            <input class="section__btn" type="submit" value="Добавить дело">
                         </form>
                     </section>
                 </div>
             </div>
         </main>
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
