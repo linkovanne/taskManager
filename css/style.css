@@ -1,30 +1,46 @@
+* {
+    box-sizing: border-box;
+}
 html,
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
 }
 
+.visually-hidden {
+    /*позиционирование*/
+    position: absolute;
+    clip: rect(0 0 0 0);
+    /*размеры*/
+    width: 1px;
+    height: 1px;
+    /*отступы*/
+    padding: 0;
+    margin: -1px;
+}
+
 .container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 970px;
     margin: 0 auto;
 }
 
 .row {
-    padding: 64px 0;
+    padding: 64px 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .section {
-    flex-basis: 47%;
 }
 
 .section_first {
+    flex-basis: 48%;
 }
 
 .section_second {
+    flex-basis: 49%;
 }
 
 .section__title {
@@ -40,9 +56,12 @@ body {
 }
 
 .section__list {
+    padding-left: 0;
+    list-style: none;
 }
 
 .section__item {
+    margin-bottom: 20px;
     background: #fff;
 }
 
@@ -51,7 +70,8 @@ body {
 }
 
 .section__btn {
-    padding: 18px 50px;
+    padding: 18px 56px;
+    margin-top: 21px;
     font-size: 16px;
     color: #fff;
     background: #2174fd;
@@ -69,25 +89,46 @@ body {
 
 .card__header {
     position: relative;
-    padding: 17px 20px;
+    padding: 14px 20px;
     display: flex;
     border-bottom: 1px solid #ebebeb;
 }
 
-.card__header h3 {
-    margin-right: 21px;
+.card__title {
+    margin: 0 21px 0 0;
+    font-size: 15px;
     color: #000;
 }
 
 .card__remove {
-    color: #e34763;
+    width: 38px;
+    height: 38px;
+    padding: 10px 15px;
+    margin-top: -14px;
+    background: transparent;
+    border: none;
+    z-index: 999999;
 }
 
 .card__arrow {
     position: absolute;
-    top: 7px;
+    top: 0;
     right: 15px;
     padding: 10px 15px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    transition: all ease-in-out .3s;
+}
+
+.card__arrow:active,
+.card__arrow:focus {
+    border: none;
+}
+
+.card__svg {
+    max-width: 100%;
 }
 
 .card.active .card__arrow {
@@ -108,17 +149,17 @@ body {
     padding: 0 21px;
     font-size: 14px;
     color: #8993ad;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .3s;
 }
 
 .active .card__content {
     position: relative;
     clip: rect(0 0 0 0);
     height: auto;
-    min-height: 85px;
+    min-height: 68px;
     margin: 0;
     padding: 10px 21px;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .3s;
 }
 
 .form {
@@ -126,10 +167,10 @@ body {
 }
 
 .form__label {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    font-size: 16px;
     color: #8993ad;
 }
 
@@ -141,4 +182,8 @@ body {
 }
 
 .form__input_lg {
+}
+
+.form__input_error {
+    border: 1px solid #f00;
 }
