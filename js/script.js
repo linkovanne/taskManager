@@ -1,7 +1,9 @@
 $(document).ready(function () {
+    initialState();
+
     function initialState() {
         console.log(localStorage.getItem('tasks'));
-        if (localStorage.getItem('tasks') == null) {
+        if (!localStorage.getItem('tasks')) {
             $('.js-list-empty').show();
         } else {
             $('.js-list-empty').hide();
@@ -9,10 +11,8 @@ $(document).ready(function () {
         }
     }
     function updateStorage () {
-        let content = $('.js-list').html();
-        localStorage.setItem('tasks', content);
+        localStorage.setItem('tasks', $('.js-list').html());
     }
-    initialState();
     function addTask() {
         let titleInput = $('input'),
             taskTitle = titleInput.val(),
@@ -62,9 +62,7 @@ $(document).ready(function () {
             $('.js-list-empty').show();
             localStorage.removeItem('tasks');
         }
-    })
-        .on('click', '.js-drop-down', function (e) {
-        let card = $(this).closest('.card');
-        card.toggleClass('active');
+    }).on('click', '.js-drop-down', function (e) {
+        $(this).closest('.card').toggleClass('active');
     });
 })

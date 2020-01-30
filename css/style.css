@@ -77,6 +77,7 @@ body {
     background: #2174fd;
     border: 1px solid #2174fd;
     transition: all ease-in-out .3s;
+    cursor: pointer;
 }
 
 .section__btn:hover {
