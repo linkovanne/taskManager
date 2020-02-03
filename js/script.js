@@ -39,6 +39,11 @@ $(document).ready(function () {
                     </article>
                 </li>
             `);
+
+            $('.section__item')
+                .on('click', '.js-card-remove', removeTask)
+                .on('click', '.js-drop-down', dropDown);
+
             updateStorage();
             taskTitle = titleInput.val('');
             taskText = textInput.val('');
@@ -48,10 +53,13 @@ $(document).ready(function () {
         }
     }
 
+    $('.section__item')
+        .on('click', '.js-card-remove', removeTask)
+        .on('click', '.js-drop-down', dropDown);
 
     $('.js-add-btn').on('click', addTask);
 
-    $('body').on('click', '.js-card-remove', function (e) {
+    function removeTask(e) {
         e.preventDefault();
         let tasks = $('.section__item');
         $(this).closest('.section__item').remove();
@@ -62,7 +70,8 @@ $(document).ready(function () {
             $('.js-list-empty').show();
             localStorage.removeItem('tasks');
         }
-    }).on('click', '.js-drop-down', function (e) {
+    }
+    function dropDown() {
         $(this).closest('.card').toggleClass('active');
-    });
+    }
 })
