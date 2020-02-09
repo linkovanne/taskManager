@@ -1,40 +1,15 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Список дел</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<main>
-    <h1 class="visually-hidden">Менеджер задач</h1>
-    <div class="container row">
-        <section class="section section_first">
-            <h2 class="section__title">Список дел:</h2>
-            <p class="section__no-list js-list-empty">Список пуст...</p>
-            <ul class="section__list js-list">
-            </ul>
-        </section>
-        <section class="section section_second">
-            <h2 class="section__title">Добавить новое дело</h2>
-            <div class="section__form form">
-                <label class="form__label">
-                    * Название
-                    <input class="form__input" type="text" name="taskTitle">
-                </label>
-                <label class="form__label">
-                    * Описание
-                    <textarea class="form__input form__input_lg" name="taskDescr" cols="30" rows="10"></textarea>
-                </label>
-                <button class="section__btn js-add-btn" type="button">Добавить дело</button>
-            </div>
-        </section>
-    </div>
-</main>
-<script src="js/lib/jquery.min.js"></script>
-<script src="js/script.js"></script>
+    <main>
+        <h1 class="visually-hidden">Менеджер задач</h1>
+        <my-app></my-app>
+    </main>
+    <script src="public/polyfills.js"></script>
+    <script src="public/app.js"></script>
 </body>
 </html>
